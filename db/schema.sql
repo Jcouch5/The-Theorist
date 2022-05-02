@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS theorist_db;
+
+CREATE DATABASE theorist_db;
