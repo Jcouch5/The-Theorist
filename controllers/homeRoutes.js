@@ -18,6 +18,10 @@ router.get('/posts', (req, res) => {
   res.render('posts');
 });
 
+router.get('/login', (req, res) => {
+  res.render('login');
+});
+
 router.get('/posts:id', (req, res) => {
   const postId = req.params.id;
   Posts.findOne({
