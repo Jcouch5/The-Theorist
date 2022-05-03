@@ -1,18 +1,18 @@
 [
-	{
-		"name": "Pikachu",
-		"type": "Electric"
-	},
-	{
-		"name": "Charmander",
-		"type": "Fire"
-	},
-	{
-		"name": "Bulbasaur",
-		"type": "Grass"
-	},
-	{
-		"name": "Squirtle",
-		"type": "Water"
-	}
+  {
+    "comment": "Pikachu",
+    "type": "Electric"
+  },
+  {
+    "comment": "Charmander",
+    "type": "Fire"
+  },
+  {
+    "comment": "Bulbasaur",
+    "type": "Grass"
+  },
+  {
+    "comment": "Squirtle",
+    "type": "Water"
+  }
 ]

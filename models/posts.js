@@ -13,17 +13,17 @@ Posts.init(
       autoIncrement: true,
     },
     title: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
       validate: {
-        len: [2, 60],
+        // len: [2, 60],
       },
     },
     summary: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
       validate: {
-        len: [2, 140],
+        // len: [2, 140],
       },
     },
     user_id: {
