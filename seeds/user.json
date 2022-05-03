@@ -1,14 +1,17 @@
 [
 	{
 		"username": "MICKEY",
-		"password": "MICKEYPW1"
+		"password": "MICKEYPW1",
+        "email": "mickey@mouse.com"
 	},
 	{
 		"username": "MOUSE",
-		"password": "MOUSEPW2"
+		"password": "MOUSEPW2",
+        "email": "mouse@mouse.com"
 	},
 	{
 		"username": "MINNIE",
-		"password": "MINNIEPW3"
+		"password": "MINNIEPW3",
+        "email": "minnie@mouse.com"
 	}
 ]
