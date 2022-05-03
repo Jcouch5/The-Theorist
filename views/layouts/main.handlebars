@@ -1,0 +1,49 @@
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>The Theorist</title>
+    <link rel='stylesheet' href='' />
+  </head>
+  <body>
+    <header class='display-flex justify-space-between'>
+      <h1 class='navbar-brand mb-0 h1'>The Theorist</h1>
+      <nav>
+        <ul class='nav justify-content-end'>
+          <li class='nav-item'>
+            <a class='nav-link' aria-current='page' href=''>HOMEPAGE</a>
+          </li>
+          <li class='nav-item'>
+            <a class='nav-link' href=''>CONSPIRACIES</a>
+          </li>
+          <li class='nav-item'>
+            <a class='nav-link' href=''>MY PROFILE</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section>
+      {{! conspiracy video go here }}
+    </section>
+
+    <section>
+      <h2>What is a conspiracy?</h2>
+      {{! <p>insert detail here about what a conspiracy is</p> }}
+    </section>
+
+    <section>
+      <h2>About Us</h2>
+      {{! <p>describe the website</p> }}
+    </section>
+
+    <footer>
+      <h6>The Theorist&copy;2022</h6>
+    </footer>
+
+    {{#if logged_in}}
+      <script src='/js/logout.js'></script>
+    {{/if}}
+  </body>
+</html>
