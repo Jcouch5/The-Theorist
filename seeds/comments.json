@@ -1,18 +1,8 @@
 [
 	{
-		"name": "Pikachu",
-		"type": "Electric"
+		"comment": "Princess Diana"
 	},
 	{
-		"name": "Charmander",
-		"type": "Fire"
-	},
-	{
-		"name": "Bulbasaur",
-		"type": "Grass"
-	},
-	{
-		"name": "Squirtle",
-		"type": "Water"
+		"comment": "Moon landing"
 	}
 ]
