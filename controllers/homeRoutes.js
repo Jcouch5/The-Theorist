@@ -2,8 +2,6 @@ const router = require('express').Router();
 const { Comments, Posts, User } = require('../models');
 const authorize = require('../util/auth');
 
-router.use('/api', apiRoutes);
-
 router.get('/', async (req, res) => {
   try {
     // Get all projects and JOIN with user data
