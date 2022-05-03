@@ -1,30 +1,9 @@
 const router = require('express').Router();
 const { Comments, Posts, User } = require('../models');
-const authorize = require('../util/auth');
+const authorize = require('../util/auth.js');
 
-router.get('/', async (req, res) => {
-  try {
-    // Get all projects and JOIN with user data
-    const projectData = await Posts.findAll({
-      include: [
-        {
-          model: Comments,
-          attributes: ['comments'],
-        },
-      ],
-    });
-
-    // Serialize data so the template can read it
-    const projects = projectData.map((project) => project.get({ plain: true }));
-
-    // Pass serialized data and session flag into template
-    res.render('homepage', {
-      projects,
-      logged_in: req.session.logged_in,
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
+router.get('/', (req, res) => {
+  res.render('homepage');
 });
 
 router.get('/signup', (req, res) => {
@@ -33,6 +12,22 @@ router.get('/signup', (req, res) => {
     return;
   }
   res.render('signup');
+});
+
+router.get('/posts', (req, res) => {
+  res.render('posts');
+});
+
+router.get('/posts:id', (req, res) => {
+  const postId = req.params.id;
+  Posts.findOne({
+    where: {
+      id: postId,
+    },
+    include: [Comments],
+  })
+    .then((post) => res.json(post))
+    .catch((err) => res.status(404).json(err));
 });
 
 module.exports = router;
