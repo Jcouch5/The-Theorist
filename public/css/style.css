@@ -61,6 +61,10 @@ h2 {
   padding-left: 100px;
 }
 
-a {
+.def {
   color: #2b2d2f;
+}
+a {
+  color: white;
+  text-decoration: none;
 }
