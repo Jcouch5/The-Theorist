@@ -1,0 +1,11 @@
+<div class='border text-center'>
+  <div class='col-md-4'>
+    <h2>{{post.title}}</h2>
+    <p>{{post.summary}}</p>
+  </div>
+</div>
+{{#each comments as |comment|}}
+  <div class='row'>
+    <p>{{comment.summary}}</p>
+  </div>
+{{/each}}
