@@ -14,8 +14,25 @@ router.get('/signup', (req, res) => {
   res.render('signup');
 });
 
-router.get('/posts', (req, res) => {
-  res.render('posts');
+router.get('/posts', async (req, res) => {
+  try {
+    const postsData = await Posts.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ['username'],
+        },
+      ],
+    });
+
+    const posts = postsData.map((post) => post.get({ plain: true }));
+    res.render('posts', {
+      posts,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 router.get('/login', (req, res) => {
