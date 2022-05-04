@@ -15,6 +15,20 @@ router.get('/signup', (req, res) => {
   res.render('signup');
 });
 
+router.get('/newpost', (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect('/login');
+    return;
+  }
+  res.render('newpost');
+});
+router.get('/comment', (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect('/login');
+    return;
+  }
+  res.render('newcomment');
+});
 router.get('/posts', async (req, res) => {
   try {
     const postsData = await Posts.findAll({
@@ -55,6 +69,7 @@ router.get('/posts/:id', async (req, res) => {
     ],
   });
   const post = postsData.get({ plain: true });
+  // res.json(post);
   res.render('postwithcomment', {
     ...post,
     logged_in: req.session.logged_in,
