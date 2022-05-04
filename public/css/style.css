@@ -10,14 +10,57 @@ header {
   margin: 5px;
 }
 
+.navbar-brand {
+  font-style: oblique;
+  font-size: 32px;
+}
+
 .nav-link {
   color: white;
+  font-size: 12px;
+  letter-spacing: 0.2em;
 }
+
+nav {
+  padding: 15px 0;
+}
+
 section {
   text-align: center;
 }
 
-footer {
+h6 {
   text-align: center;
   font-size: 8px;
+}
+
+.define {
+  text-align: left;
+  padding: 20px;
+  margin: 20px;
+  background-color: #d3d3d3;
+  color: #2b2d2f;
+}
+
+.definition {
+  text-indent: 50px;
+}
+
+h2 {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 16px;
+  font-family: 'Gill Sans', Arial, sans-serif;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.list {
+  padding-left: 100px;
+}
+
+a {
+  color: #2b2d2f;
 }
