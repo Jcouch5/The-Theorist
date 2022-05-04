@@ -16,11 +16,7 @@ Posts.init(
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-<<<<<<< HEAD
-        len: [2, 140],
-=======
         len: [2, 200],
->>>>>>> 1c1b9d9c3e5f58e1b8bbeaafd9b2c61c97b3213f
       },
     },
     summary: {
