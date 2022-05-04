@@ -1,5 +1,6 @@
 const sequelize = require('../config/connection');
 const { User, Posts, Comments } = require('../models');
+const bcrypt = require('bcrypt');
 
 const userData = require('./user.json');
 const postsData = require('./posts.json');
@@ -8,8 +9,14 @@ const commentsData = require('./comments.json');
 const injectData = async () => {
   await sequelize.sync({ force: true });
 
-  const users = await User.bulkCreate(userData);
+  userData.forEach(async (user) => {
+    console.log(user.password);
+    user.password = await bcrypt.hash(user.password, 10);
+  });
 
+  console.log(userData);
+  const createUsers = () => User.bulkCreate(userData);
+  createUsers();
   for (const posts of postsData) {
     await Posts.create({
       ...posts,

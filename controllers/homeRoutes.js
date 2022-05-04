@@ -15,18 +15,10 @@ router.get('/signup', (req, res) => {
   res.render('signup');
 });
 
-router.get('/newpost', (req, res) => {
-  if (req.session.loggedIn) {
-    res.redirect('/login');
-    return;
-  }
+router.get('/newpost', withAuth, (req, res) => {
   res.render('newpost');
 });
-router.get('/comment', (req, res) => {
-  if (req.session.loggedIn) {
-    res.redirect('/login');
-    return;
-  }
+router.get('/comment', withAuth, (req, res) => {
   res.render('newcomment');
 });
 router.get('/posts', async (req, res) => {
