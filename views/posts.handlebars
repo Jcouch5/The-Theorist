@@ -1,10 +1,12 @@
 <div class='row mb-4'></div>
 {{#each posts as |post|}}
+<a href="/posts/{{post.id}}">
   <div class="border text-center">
     <div class='col-md-4'>
       <h2>{{post.title}}</h2>
       <p>{{post.summary}}</p>
     </div>
  </div>
+</a>
 {{/each}}
  </div>

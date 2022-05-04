@@ -41,13 +41,19 @@ router.get('/login', (req, res) => {
 
 router.get('/posts:id', (req, res) => {
   const postId = req.params.id;
-  Posts.findOne({
-    where: {
-      id: postId,
-    },
-    include: [Comments],
+  Posts.findByPk(postId, {
+    include: [
+      {
+        model: User,
+        attributes: ['username'],
+      },
+      {
+        model: Comments,
+        attributes: ['comment'],
+      },
+    ],
   })
-    .then((post) => res.json(post))
+    .then((post) => res.json('hello'))
     .catch((err) => res.status(404).json(err));
 });
 
