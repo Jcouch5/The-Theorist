@@ -16,15 +16,12 @@ Posts.init(
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [2, 60],
+        len: [2, 200],
       },
     },
     summary: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
-      validate: {
-        len: [2, 140],
-      },
     },
     user_id: {
       type: DataTypes.INTEGER,
