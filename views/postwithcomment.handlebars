@@ -1,11 +1,13 @@
-<div class='border text-center'>
-  <div class='col-md-4'>
-    <h2>{{post.title}}</h2>
-    <p>{{post.summary}}</p>
+<a href="/comment" class="m-3">Add a New Comment</a>
+<div class='border text-center m-3'>
+  <div class='col-md-4 text-center'>
+    <h2>{{title}}</h2>
+    <p>{{summary}}</p>
+    <p>by: {{user.username}}</p>
   </div>
 </div>
 {{#each comments as |comment|}}
-  <div class='row'>
-    <p>{{comment.summary}}</p>
+  <div class='row border text-center m-3'>
+    <p>{{comment.comment}}</p>
   </div>
 {{/each}}
