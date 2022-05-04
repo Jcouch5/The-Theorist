@@ -13,18 +13,15 @@ Posts.init(
       autoIncrement: true,
     },
     title: {
-      type: DataTypes.TEXT,
+      type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        // len: [2, 60],
+        len: [2, 140],
       },
     },
     summary: {
       type: DataTypes.TEXT,
       allowNull: false,
-      validate: {
-        // len: [2, 140],
-      },
     },
     user_id: {
       type: DataTypes.INTEGER,
