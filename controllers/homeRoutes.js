@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { Comments, Posts, User } = require('../models');
+const withAuth = require('../util/auth.js');
 const authorize = require('../util/auth.js');
 
 router.get('/', (req, res) => {
@@ -14,6 +15,12 @@ router.get('/signup', (req, res) => {
   res.render('signup');
 });
 
+router.get('/newpost', withAuth, (req, res) => {
+  res.render('newpost');
+});
+router.get('/comment', withAuth, (req, res) => {
+  res.render('newcomment');
+});
 router.get('/posts', async (req, res) => {
   try {
     const postsData = await Posts.findAll({
@@ -39,16 +46,26 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-router.get('/posts:id', (req, res) => {
+router.get('/posts/:id', async (req, res) => {
   const postId = req.params.id;
-  Posts.findOne({
-    where: {
-      id: postId,
-    },
-    include: [Comments],
-  })
-    .then((post) => res.json(post))
-    .catch((err) => res.status(404).json(err));
+  const postsData = await Posts.findByPk(postId, {
+    include: [
+      {
+        model: User,
+        attributes: ['username'],
+      },
+      {
+        model: Comments,
+        attributes: ['comment'],
+      },
+    ],
+  });
+  const post = postsData.get({ plain: true });
+
+  res.render('postwithcomment', {
+    ...post,
+    logged_in: req.session.logged_in,
+  });
 });
 
 module.exports = router;
