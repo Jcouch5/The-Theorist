@@ -1,15 +1,14 @@
 <div class="card-group">
 <div class="row m-4  grid">
 {{#each posts as |post|}}
-<a href="/posts/{{post.id}}">
   <div class="card-border-dark text-center grid-cell">
     <div class="card text-white bg-dark">
-      <img  src="{{post.imageUrl}}" class="card-img-top" alt=".img" >
+      <a href="/posts/{{post.id}}"><img  src="{{post.imageUrl}}" class="card-img-top" alt=".img" ></a>
       <h2 class="card-title"><strong>{{post.title}}</strong></h2>
       <p class="card-text italic d-flex flex-wrap">{{post.summary}}</p>
     </div>
  </div>
-</a>
+
 {{/each}}
  </div>
  </div>
