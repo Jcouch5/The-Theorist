@@ -73,6 +73,12 @@ h2 {
   margin: 1em;
   text-align: center;
 }
+.newpost {
+  font-size: 3rem;
+}
+.newcomment {
+  font-size: 2rem;
+}
 *,
 *:before,
 *:after {

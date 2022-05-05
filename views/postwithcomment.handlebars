@@ -1,6 +1,6 @@
 
 <div class="container position-relative">
-<a href="/comment" class="m-3">Add a New Comment</a>
+<a href="/comment" class="mx-3 col-2 newcomment">New Comment</a>
 <div class="card-border-dark text-center grid-cell">
     <div class="card text-white bg-dark ">
       <img  src="{{imageUrl}}" class="card-img-top" alt=".img" >
@@ -12,7 +12,7 @@
 {{#each comments as |comment|}}
 <div>
   <div class='row border border-1 text-center my-2'>
-    <p>{{comment.comment}}</p>
+    <p>{{user.username}}: {{comment.comment}} </p>
   </div>
   </div>
 {{/each}}
