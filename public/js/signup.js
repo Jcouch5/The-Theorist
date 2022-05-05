@@ -1,3 +1,4 @@
+const validator = require('validator');
 const signupFormHandler = async (event) => {
   event.preventDefault();
 
@@ -5,7 +6,7 @@ const signupFormHandler = async (event) => {
   const email = document.querySelector('#email-signup').value.trim();
   const password = document.querySelector('#password-signup').value.trim();
 
-  if (username && email && password) {
+  if (username && validator.isEmail(email) && password) {
     const response = await fetch('/api/signup', {
       method: 'POST',
       body: JSON.stringify({ username, email, password }),
