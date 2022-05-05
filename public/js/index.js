@@ -3,7 +3,6 @@ const postFormHandler = async (event) => {
 
   const title = document.querySelector('#new-title').value.trim();
   const summary = document.querySelector('#new-summary').value.trim();
-  console.log(title, summary);
 
   if (title && summary) {
     const response = await fetch('/api/posts', {
