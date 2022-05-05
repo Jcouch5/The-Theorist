@@ -1,20 +1,23 @@
-
-<div class="container position-relative">
-<a href="/comment" class="mx-3 col-2 newcomment">New Comment</a>
+<div class="container d-flex justify-content-center">
 <div class="card-border-dark text-center grid-cell">
-    <div class="card text-white bg-dark ">
+    <div class="card text-white bg-hp m-2">
       <img  src="{{imageUrl}}" class="card-img-top" alt=".img" >
+      <br>
       <h2 class="card-title"><strong>{{title}}</strong></h2>
       <p class="card-text italic d-flex flex-wrap">{{summary}}</p>
     </div>
- </div>
- <h2>Comments:</h2>
+    </div>
+    </div>
+    <div class="container">
+    <div class="m-3">
+ <a href="/comment" class="text-color"><p>Add a New Comment</p></a>
+ <h2 class="">Comments:</h2>
 {{#each comments as |comment|}}
 <div>
-  <div class='row border border-1 text-center my-2'>
-    <p>{{user.username}}: {{comment.comment}} </p>
+  <div class='column text-start'>
+    <p>{{user.username}}: {{comment.comment}}</p>
   </div>
   </div>
 {{/each}}
 </div>
-
+</div>
