@@ -113,9 +113,6 @@ h2 {
   .grid-cell {
     line-height: 3vw;
   }
-}
-
-@media only screen and (max-width: 992px) {
   #vid {
     display: none;
   } /*. hide video on mobile screens*/
