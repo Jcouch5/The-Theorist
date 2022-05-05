@@ -64,3 +64,20 @@ h2 {
 a {
   color: #2b2d2f;
 }
+
+.about {
+  padding: 20px;
+  margin: 20px;
+  border: 1px solid #d3d3d3;
+}
+
+#aboutSignup {
+  color: white;
+}
+
+#aboutMain {
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-bottom: 1px dotted #d3d3d3;
+}
