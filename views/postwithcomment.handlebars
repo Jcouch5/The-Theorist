@@ -1,0 +1,15 @@
+<a href="/comment" class="m-3 post">Add a New Comment</a>
+<div class="card-border-dark text-center grid-cell">
+    <div class="card text-white bg-dark">
+      <img  src="{{imageUrl}}" class="card-img-top" alt=".img" >
+      <h2 class="card-title"><strong>{{title}}</strong></h2>
+      <p class="card-text italic d-flex flex-wrap">{{summary}}</p>
+    </div>
+ </div>
+ <h2>Comments:</h2>
+{{#each comments as |comment|}}
+  <div class='row border text-center m-3'>
+    <p>{{comment.comment}}</p>
+  </div>
+{{/each}}
+<script src='/js/store.js'></script>

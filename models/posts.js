@@ -23,6 +23,10 @@ Posts.init(
       type: DataTypes.TEXT,
       allowNull: false,
     },
+    imageUrl: {
+        type: DataTypes.STRING,
+        allowNull: true,
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
