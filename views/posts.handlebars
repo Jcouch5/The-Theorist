@@ -1,6 +1,7 @@
 <div class="card-group">
 <div class="row m-4  grid">
 {{#each posts as |post|}}
+<a href="/posts/{{post.id}}">
   <div class="card-border-dark text-center grid-cell">
     <div class="card text-white bg-dark">
       <img  src="{{post.imageUrl}}" class="card-img-top" alt=".img" >
