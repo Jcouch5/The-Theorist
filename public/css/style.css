@@ -1,6 +1,7 @@
 body {
   background-color: #2b2d2f;
   color: white;
+  position: relative;
 }
 
 header {
@@ -32,6 +33,9 @@ section {
 h6 {
   text-align: center;
   font-size: 8px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .define {
@@ -116,4 +120,10 @@ h2 {
   #vid {
     display: none;
   } /*. hide video on mobile screens*/
+}
+
+#signupbtn {
+  color: #2b2d2f;
+  background-color: white;
+  border-color: white;
 }
