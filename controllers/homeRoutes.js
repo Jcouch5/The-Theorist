@@ -19,7 +19,7 @@ router.get('/newpost', withAuth, (req, res) => {
   res.render('newpost');
 });
 router.get('/comment', withAuth, (req, res) => {
-  res.render('newcomment');
+  res.render('newComment');
 });
 router.get('/posts', async (req, res) => {
   try {
