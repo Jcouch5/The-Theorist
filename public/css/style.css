@@ -108,11 +108,11 @@ h2 {
   color: #d3d3d3;
 }
 
-*,
+/* *,
 *:before,
 *:after {
   box-sizing: border-box;
-}
+} */
 
 @media (max-width: 600px) {
   /* body {
