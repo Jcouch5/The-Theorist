@@ -22,7 +22,8 @@
     "mysql2": "^2.2.5",
     "nodemon": "^2.0.16",
     "normalize.css": "^8.0.1",
-    "sequelize": "^6.3.5"
+    "sequelize": "^6.3.5",
+    "validator": "^13.7.0"
   },
   "devDependencies": {
     "eslint": "^7.12.1",

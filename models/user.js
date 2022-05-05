@@ -1,6 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 // Still require use of connection.js file
 const bcrypt = require('bcrypt');
+const validator = require('validator');
 
 const sequelize = require('../config/connection');
 
