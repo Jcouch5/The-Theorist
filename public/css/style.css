@@ -92,6 +92,15 @@ h2 {
   text-align: center;
 }
 
+
+.bg-hp {
+  background-color: #2b2d2f;
+}
+
+.text-color {
+  color: #d3d3d3;
+}
+
 *,
 *:before,
 *:after {
