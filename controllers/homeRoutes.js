@@ -19,7 +19,7 @@ router.get('/newpost', withAuth, (req, res) => {
   res.render('newpost');
 });
 router.get('/comment', withAuth, (req, res) => {
-  res.render('newcomment');
+  res.render('newComment');
 });
 router.get('/posts', async (req, res) => {
   try {
@@ -57,6 +57,12 @@ router.get('/posts/:id', async (req, res) => {
       {
         model: Comments,
         attributes: ['comment'],
+        include: [
+          {
+            model: User,
+            attributes: ['username'],
+          },
+        ],
       },
     ],
   });
