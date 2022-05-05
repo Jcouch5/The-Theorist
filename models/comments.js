@@ -39,5 +39,4 @@ Comments.init(
     modelName: 'comments',
   }
 );
-
 module.exports = Comments;
