@@ -108,11 +108,11 @@ h2 {
   color: #d3d3d3;
 }
 
-*,
+/* *,
 *:before,
 *:after {
   box-sizing: border-box;
-}
+} */
 
 @media (max-width: 600px) {
   /* body {
@@ -138,7 +138,9 @@ h2 {
   border-color: white;
 }
 
-/* .cards {
-  margin: 5px;
-  padding: 20px;
-} */
+#newconspiracybtn {
+  color: #2b2d2f;
+  background-color: white;
+  border-color: white;
+  margin: 25px;
+}
