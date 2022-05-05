@@ -10,11 +10,9 @@ const injectData = async () => {
   await sequelize.sync({ force: true });
 
   userData.forEach(async (user) => {
-    console.log(user.password);
     user.password = await bcrypt.hash(user.password, 10);
   });
 
-  console.log(userData);
   const createUsers = () => User.bulkCreate(userData);
   createUsers();
   for (const posts of postsData) {
