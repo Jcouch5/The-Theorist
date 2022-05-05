@@ -1,5 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
-// Still require use of connection.js file
+
 const sequelize = require('../config/connection');
 
 class Posts extends Model {}
@@ -24,8 +24,8 @@ Posts.init(
       allowNull: false,
     },
     imageUrl: {
-        type: DataTypes.STRING,
-        allowNull: true,
+      type: DataTypes.STRING,
+      allowNull: true,
     },
     user_id: {
       type: DataTypes.INTEGER,
