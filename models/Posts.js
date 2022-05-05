@@ -1,10 +1,10 @@
 const { Model, DataTypes } = require('sequelize');
-// Still require use of connection.js file
+
 const sequelize = require('../config/connection');
+console.log('hello');
+class Posts extends Model {}
 
-class Comments extends Model {}
-
-Comments.init(
+Posts.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -12,16 +12,20 @@ Comments.init(
       allowNull: false,
       autoIncrement: true,
     },
-    comment: {
+    title: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [2, 200],
+      },
+    },
+    summary: {
       type: DataTypes.TEXT,
       allowNull: false,
     },
-    post_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'posts',
-        key: 'id',
-      },
+    imageUrl: {
+      type: DataTypes.STRING,
+      allowNull: true,
     },
     user_id: {
       type: DataTypes.INTEGER,
@@ -36,7 +40,8 @@ Comments.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'comments',
+    modelName: 'posts',
   }
 );
-module.exports = Comments;
+
+module.exports = Posts;
