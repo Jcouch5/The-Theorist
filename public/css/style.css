@@ -80,4 +80,5 @@ a {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   border-bottom: 1px dotted #d3d3d3;
+  font-weight: bold;
 }
