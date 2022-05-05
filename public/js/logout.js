@@ -1,6 +1,6 @@
 const logout = async () => {
 
-    const response = await fetch('', {
+    const response = await fetch('/profile', {
         method: 'POST',
         headers: { 'Content-Type' : 'application/json'},
     });
