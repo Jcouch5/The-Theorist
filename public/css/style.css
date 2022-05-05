@@ -65,6 +65,24 @@ h2 {
   color: #2b2d2f;
 }
 
+.about {
+  padding: 20px;
+  margin: 20px;
+  border: 1px solid #d3d3d3;
+}
+
+#aboutSignup {
+  color: white;
+}
+
+#aboutMain {
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-bottom: 1px dotted #d3d3d3;
+  font-weight: bold;
+}
+
 .grid-cell {
   flex: 1 1 auto;
   max-width: 29vw;
@@ -73,17 +91,22 @@ h2 {
   margin: 1em;
   text-align: center;
 }
+<<<<<<< HEAD
 .newpost {
   font-size: 3rem;
 }
 .newcomment {
   font-size: 2rem;
 }
+=======
+
+>>>>>>> e4a27332750f3510f9213a5beeeaba0e23925b03
 *,
 *:before,
 *:after {
   box-sizing: border-box;
 }
+
 @media only screen and (max-width: 420px) {
   body {
     font-size: 12px;
