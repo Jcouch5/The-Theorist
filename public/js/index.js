@@ -1,7 +1,6 @@
 const postFormHandler = async (event) => {
   event.preventDefault();
 
-  console.log(document);
   const title = document.querySelector('#new-title').value.trim();
   const summary = document.querySelector('#new-summary').value.trim();
 
