@@ -24,6 +24,8 @@
   ###   GitHub Repository:  The-Theorist
   ###   Email:  cncarnevale@gmail.com (Christian Carnevale)
 
+## Screenshot
+![Screenshot of deployed application](./Screen%20Shot%202022-05-05%20at%209.31.36%20PM.png)
   ## Deployment
   https://desolate-peak-38823.herokuapp.com/
   
