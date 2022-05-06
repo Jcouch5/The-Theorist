@@ -1,5 +1,6 @@
 const saveId = async () => {
   const searchId = document.location.pathname.split('/');
+
   const last = searchId.length - 1;
   const id = searchId[last];
 
