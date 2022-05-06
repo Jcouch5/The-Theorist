@@ -88,12 +88,16 @@ h2 {
 }
 
 .grid-cell {
-  flex: 1 1 auto;
-  max-width: 29vw;
+  /* flex: 1 1 auto; */
+  max-width: 25vw;
   line-height: 1.5vw;
   border: solid;
-  margin: 1em;
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
 }
 
 .bg-hp {
@@ -104,18 +108,24 @@ h2 {
   color: #d3d3d3;
 }
 
-*,
+/* *,
 *:before,
 *:after {
   box-sizing: border-box;
-}
+} */
 
-@media only screen and (max-width: 420px) {
-  body {
+@media (max-width: 600px) {
+  /* body {
     font-size: 12px;
   }
   .grid-cell {
     line-height: 3vw;
+  } */
+  .grid-cell {
+    flex-direction: column;
+    font-size: 16px;
+    line-height: 1em;
+    max-width: 100vw;
   }
   #vid {
     display: none;
@@ -126,4 +136,11 @@ h2 {
   color: #2b2d2f;
   background-color: white;
   border-color: white;
+}
+
+#newconspiracybtn {
+  color: #2b2d2f;
+  background-color: white;
+  border-color: white;
+  margin: 25px;
 }
