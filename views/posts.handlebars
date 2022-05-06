@@ -7,10 +7,17 @@
     {{#each posts as |post|}}
       <div class="card-border-dark text-center grid-cell">
         <div class="card text-white bg-hp my-2">
+          {{#if post.imageUrl}}
           <a href="/posts/{{post.id}}"><img  src="{{post.imageUrl}}" class="card-img-top" alt=".img" ></a>
           <br>
           <h2 class="card-title"><strong>{{post.title}}</strong></h2>
           <p class="card-text italic d-flex flex-wrap">{{post.summary}}</p>
+          {{else}}
+          <a href="/posts/{{post.id}}" class="text-white">
+          <h2 class="card-title"><strong>{{post.title}}</strong></h2>
+          <p class="card-text italic d-flex flex-wrap">{{post.summary}}</p>
+          </a>
+          {{/if}}
         </div>
       </div>
     {{/each}}

@@ -23,7 +23,7 @@ User.init(
       allowNull: false,
       unique: true,
       validate: {
-        len: [8, 30],
+        len: [4, 30],
       },
     },
     password: {
