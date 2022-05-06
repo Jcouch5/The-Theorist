@@ -1,5 +1,5 @@
 <div class="container d-flex justify-content-center">
-<div class="card-border-dark text-center grid-cell">
+  <div class="card-border-dark text-center grid-cell">
     <div class="card text-white bg-hp m-2">
       {{#if imageUrl}}
       <img  src="{{imageUrl}}" class="card-img-top" alt=".img" >
@@ -8,19 +8,27 @@
       <h2 class="card-title"><strong>{{title}}</strong></h2>
       <p class="card-text italic d-flex flex-wrap">{{summary}}</p>
     </div>
-    </div>
-    </div>
-    <div class="container">
-    <div class="m-3">
- <a href="/comment" class="text-color post"><p>Add a New Comment</p></a>
- <h2 class="">Comments:</h2>
-{{#each comments as |comment|}}
-<div>
-  <div class='column text-start'>
-    <p>{{user.username}}: {{comment.comment}}</p>
   </div>
+</div>
+
+<div class="container">
+  <div class="m-3">
+    <div class="d-grid gap-2">
+      <a class="btn btn-primary" id="signupbtn" href='/comment'>Add a New Comment</a>
+    </div>
+    <br>
+    <br>
+    <h2 class="">Comments:</h2>
+    {{#each comments as |comment|}}
+    <div>
+      <div class='column text-start'>
+        <p>{{user.username}}: {{comment.comment}}</p>
+      </div>
+    </div>
+    {{/each}}
+    <br>
+    <br>
   </div>
-{{/each}}
 </div>
-</div>
+
 <script src="/js/store.js"></script>
